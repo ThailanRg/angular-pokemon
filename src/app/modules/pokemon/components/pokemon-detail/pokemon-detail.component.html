@@ -1,0 +1,43 @@
+<div class="row" *ngIf="pokemon">
+  <div class="col-md-6 offset-md-3">
+    <div class="card">
+      <img [src]="pokemon.image" alt="Pokémon" class="card-img-top" />
+      <div class="card-body">
+        <h2 class="card-title">{{ pokemon.name }}</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <p><strong>ID:</strong> {{ pokemon.id }}</p>
+            <p>
+              <strong>Tipo:</strong>
+              <app-pokemon-type [type]="pokemon.type"></app-pokemon-type>
+            </p>
+            <p><strong>Altura:</strong> 0.7 m</p>
+            <p><strong>Peso:</strong> 6.9 kg</p>
+          </div>
+          <div class="col-md-6">
+            <p><strong>Habilidades:</strong></p>
+            <ul class="list-group">
+              <li class="list-group-item">Overgrow</li>
+              <li class="list-group-item">Chlorophyll</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-3">
+          <h5>Treinadores</h5>
+          <a routerLink="/treinador/1">Ash Ketchum</a>,
+          <a routerLink="/treinador/2">Misty</a>,
+          <a routerLink="/treinador/3">Brock</a>,
+          <a routerLink="/treinador/4">N</a>
+        </div>
+
+        <div class="mt-3">
+          <h5>Evoluções</h5>
+          <a href="/pokemon/3">Ivysour</a>,
+          <a routerLink="/pokemon/3">Venusaur</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
